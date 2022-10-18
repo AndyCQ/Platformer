@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b0abc397c650a44ba1fc89eec0597fb
+guid: 34379aa2991a2cc41ad637f729a20f52
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 0.5
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,10 +132,10 @@ TextureImporter:
       name: buttons_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 753
-        width: 1199
-        height: 503
+        x: 4
+        y: 108
+        width: 58
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07e25b8f019bfe647a108d9c067b6f79
-      internalID: 957839163
+      spriteID: 29208a7ee11becb489845f45f0eef75b
+      internalID: 232843843
       vertices: []
       indices: 
       edges: []
@@ -153,10 +153,10 @@ TextureImporter:
       name: buttons_1
       rect:
         serializedVersion: 2
-        x: 138
-        y: 173
-        width: 1121
-        height: 425
+        x: 16
+        y: 94
+        width: 9
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d98f0268ffa76f844be6954fe8da0d06
-      internalID: -915957060
+      spriteID: 38e8cb12f7f53cc40afedeb61872aa9d
+      internalID: 1792400505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 66
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310cf94490e4f264e9e941ca54f8e0c5
+      internalID: -1842160675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 42
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff964d212e188e4d89bd551637b2beb
+      internalID: 1857645058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 20
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d7de7ca16d4514ea27898552eec4e8
+      internalID: 1893851326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 4
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45783c8a9d06dd542bc504a6f24ac00c
+      internalID: 1062530784
       vertices: []
       indices: 
       edges: []
@@ -181,8 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      buttons_0: 957839163
-      buttons_1: -915957060
+      buttons_2: -1842160675
+      buttons_0: 232843843
+      buttons_4: 1893851326
+      buttons_1: 1792400505
+      buttons_5: 1062530784
+      buttons_3: 1857645058
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
