@@ -18,15 +18,22 @@ public class PlayerCode : MonoBehaviour
     Rigidbody2D _rigidbody;
     //Animator _animator;
 
+    Vector2 playerSpawnPoint;
+    bool isDead = false;
+    SpriteRenderer _renderer;
+
     float xSpeed = 0;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         //_animator = GetComponent<Animator>();
+        playerSpawnPoint = transform.position;
+        _renderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
     {
+        if(isDead) return;
         xSpeed = Input.GetAxisRaw("Horizontal") * speed;
         if((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0))
         {
@@ -40,6 +47,8 @@ public class PlayerCode : MonoBehaviour
 
     private void Update() {
 
+        if(isDead) return;
+
         grounded = Physics2D.OverlapCircle(feetTrans.position, .3f, groundLayer);
         //_animator.SetBool("Grounded", grounded);
         if(Input.GetButtonDown("Jump") && grounded)
@@ -47,8 +56,35 @@ public class PlayerCode : MonoBehaviour
             _rigidbody.AddForce(new Vector2(0, jumpForce));
         }
         if(Input.GetButtonDown("Fire1")){
+            //_animator.SetTrigger("Shoot");
             GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            transform.position = playerSpawnPoint;
+            StartCoroutine(PlayerRespawn());
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Checkpoint")){
+            playerSpawnPoint = other.transform.position;
+        }
+    }
+
+    IEnumerator PlayerRespawn(){
+        isDead = true;
+        _renderer.color = Color.red;
+        yield return null;
+        _renderer.enabled = false;
+        yield return new WaitForSeconds(1);
+        isDead = false;
+        _renderer.enabled = true;
+        _renderer.color = Color.white;
+
     }
 } 
