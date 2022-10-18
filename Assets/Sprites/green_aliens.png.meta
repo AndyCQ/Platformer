@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e38ae7cbd0b20a4389094c1327695ef
+guid: f6371e627fa0f6d44b6e71ddf9af237d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -129,22 +129,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buttons_0
+      name: green_aliens_0
       rect:
         serializedVersion: 2
-        x: 85
-        y: 736
-        width: 1215
-        height: 517
+        x: 7
+        y: 47
+        width: 23
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 14, y: 13, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02e285a95b743084abd7e8ebde3af1fd
-      internalID: -1821566910
+      spriteID: 3b9a730f7d8ca3c45ab6c9ed9a3a3547
+      internalID: 962462344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_aliens_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 48
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dd20e19b37e4d4b8d36bcb132a018f
+      internalID: 1020770363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_aliens_3
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 48
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a520990545bcf404ebf22e9848f1f84c
+      internalID: 569811316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_aliens_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 51
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c809363a12b5fbe418edf0fea60d95c5
+      internalID: -407735470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_aliens_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 4
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844cd31a3885328408cd3e35e87bb3bb
+      internalID: -817301907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_aliens_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 4
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6410800834fbcaa4e81ad5e62b4f6086
+      internalID: -616893175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_aliens_7
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 7
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb0dd51c47f124438c34ff116e815a8
+      internalID: -1148953733
       vertices: []
       indices: 
       edges: []
@@ -160,7 +286,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      buttons_0: -1821566910
+      green_aliens_1: -205094969
+      green_aliens_0: 962462344
+      green_aliens_7: -1148953733
+      green_aliens_4: -407735470
+      green_aliens_6: -616893175
+      green_aliens_2: 1020770363
+      green_aliens_5: -817301907
+      green_aliens_3: 569811316
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
