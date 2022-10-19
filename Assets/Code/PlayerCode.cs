@@ -16,7 +16,7 @@ public class PlayerCode : MonoBehaviour
     public Transform firePoint;
 
     Rigidbody2D _rigidbody;
-    //Animator _animator;
+    Animator _animator;
 
     Vector2 playerSpawnPoint;
     bool isDead = false;
@@ -26,7 +26,7 @@ public class PlayerCode : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        //_animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         playerSpawnPoint = transform.position;
         _renderer = GetComponent<SpriteRenderer>();
     }
@@ -41,7 +41,7 @@ public class PlayerCode : MonoBehaviour
         }
 
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
-        //_animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+        _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
 
     }
 
@@ -50,13 +50,13 @@ public class PlayerCode : MonoBehaviour
         if(isDead) return;
 
         grounded = Physics2D.OverlapCircle(feetTrans.position, .3f, groundLayer);
-        //_animator.SetBool("Grounded", grounded);
+        _animator.SetBool("Grounded", grounded);
         if(Input.GetButtonDown("Jump") && grounded)
         {
             _rigidbody.AddForce(new Vector2(0, jumpForce));
         }
         if(Input.GetButtonDown("Fire1")){
-            //_animator.SetTrigger("Shoot");
+            _animator.SetTrigger("Shoot");
             GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
         }
