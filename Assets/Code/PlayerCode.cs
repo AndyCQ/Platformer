@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCode : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class PlayerCode : MonoBehaviour
     bool isDead = false;
     SpriteRenderer _renderer;
 
+    public float deathLevel = -5;
+
     float xSpeed = 0;
     void Start()
     {
@@ -42,6 +45,10 @@ public class PlayerCode : MonoBehaviour
 
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+        if(transform.position.y < deathLevel){
+            transform.position = playerSpawnPoint;
+            StartCoroutine(PlayerRespawn());
+        }
 
     }
 
@@ -60,6 +67,7 @@ public class PlayerCode : MonoBehaviour
             GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -75,6 +83,8 @@ public class PlayerCode : MonoBehaviour
             playerSpawnPoint = other.transform.position;
         }
     }
+
+
 
     IEnumerator PlayerRespawn(){
         isDead = true;
