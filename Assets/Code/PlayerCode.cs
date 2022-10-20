@@ -25,6 +25,9 @@ public class PlayerCode : MonoBehaviour
 
     public float deathLevel = -5;
 
+    public int currHealth;
+    public int maxHealth = 5;
+
     float xSpeed = 0;
     void Start()
     {
@@ -32,6 +35,8 @@ public class PlayerCode : MonoBehaviour
         _animator = GetComponent<Animator>();
         playerSpawnPoint = transform.position;
         _renderer = GetComponent<SpriteRenderer>();
+
+        currHealth = maxHealth;
     }
 
     void FixedUpdate()
@@ -68,6 +73,13 @@ public class PlayerCode : MonoBehaviour
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
         }
 
+        if(currHealth > maxHealth){
+            currHealth = maxHealth;
+        }
+        if(currHealth <= 0){
+            Die();
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -95,4 +107,27 @@ public class PlayerCode : MonoBehaviour
         _renderer.enabled = true;
 
     }
+
+    void Die() {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void Damage(int dmg){
+        currHealth -= dmg;
+        gameObject.GetComponent<Animation>().Play("GetsHit");
+        
+    }
+
+    public IEnumerator Knockback (float knockDur, float knockbackPwr, Vector3 knockbackDir){
+        float timer = 0;
+        _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
+
+        while (knockDur > timer) {
+            timer += Time.deltaTime;
+            _rigidbody.AddForce(new Vector3(knockbackDir.x + -1000, knockbackDir.y + knockbackPwr, transform.position.z));
+        }
+
+        yield return 0;
+    }
+
 } 
