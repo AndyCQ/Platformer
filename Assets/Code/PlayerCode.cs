@@ -88,13 +88,11 @@ public class PlayerCode : MonoBehaviour
 
     IEnumerator PlayerRespawn(){
         isDead = true;
-        _renderer.color = Color.red;
         yield return null;
         _renderer.enabled = false;
         yield return new WaitForSeconds(1);
         isDead = false;
         _renderer.enabled = true;
-        _renderer.color = Color.white;
 
     }
 } 
