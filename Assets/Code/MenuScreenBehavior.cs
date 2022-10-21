@@ -7,6 +7,7 @@ public class MenuScreenBehavior : MonoBehaviour
 {
     public string SceneToGo;
     public void SwitchScene(){
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneToGo);
     }
 

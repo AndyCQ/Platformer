@@ -68,9 +68,11 @@ public class PlayerCode : MonoBehaviour
             _rigidbody.AddForce(new Vector2(0, jumpForce));
         }
         if(Input.GetButtonDown("Fire1")){
-            _animator.SetTrigger("Shoot");
-            GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
+            if(!Pause_Menu.Paused){
+                _animator.SetTrigger("Shoot");
+                GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
+            }
         }
 
         if(currHealth > maxHealth){
