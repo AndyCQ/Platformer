@@ -1001,6 +1001,9 @@ MonoBehaviour:
   grounded: 0
   bulletPrefab: {fileID: 2107701319770021801, guid: 8ce4328ac5b9d704cabe8bd117464aa9, type: 3}
   firePoint: {fileID: 1765500540}
+  deathLevel: -5
+  currHealth: 0
+  maxHealth: 5
 --- !u!95 &1525552548
 Animator:
   serializedVersion: 4
@@ -1075,7 +1078,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69a5fd56eef452443a7318c500dfca71, type: 2}
+  - {fileID: 2100000, guid: 7d1b64b2a0bc3a34a9a82b49399b5076, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1202,7 +1205,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3708e7e24c577734a91a923a864712e6, type: 2}
+  - {fileID: 2100000, guid: 32fb8aa95d7b5a14ca017ce083879e92, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

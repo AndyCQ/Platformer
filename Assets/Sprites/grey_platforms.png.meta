@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 896f0bc178b19440885127627972f04d
+guid: 9d134b880e435c249bc17e5f6bd6a8ce
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ufos_0
+      name: grey_platforms_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 35
-        width: 19
-        height: 9
+        x: 5
+        y: 23
+        width: 50
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20031eaa53382374290129f40bfdfb15
-      internalID: 136521869
+      spriteID: 63ba4b3de9bb43a49b3b2b439fe13c1f
+      internalID: -899704516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ufos_1
+      name: grey_platforms_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 25
-        width: 19
-        height: 9
+        x: 22
+        y: 14
+        width: 33
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 126b2d1d05e961c498499b2ed4cc70ba
-      internalID: -1932566435
+      spriteID: ed0fa00d7528b544fbe52c5848372c90
+      internalID: -404665346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ufos_2
+      name: grey_platforms_2
       rect:
         serializedVersion: 2
-        x: 4
-        y: 15
+        x: 36
+        y: 4
         width: 19
-        height: 9
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,29 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 835160ee5b0e1ee449fa5c70d9f092e2
-      internalID: -998527516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ufos_3
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 5
-        width: 19
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c12b8213bf87fe4fbccd689ef14d517
-      internalID: 1672946683
+      spriteID: fe4ea8295c19be04ba35dede7589f5a3
+      internalID: -1551419370
       vertices: []
       indices: 
       edges: []
@@ -223,10 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ufos_1: -1932566435
-      ufos_0: 136521869
-      ufos_2: -998527516
-      ufos_3: 1672946683
+      grey_platforms_2: -1551419370
+      grey_platforms_1: -404665346
+      grey_platforms_0: -899704516
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
