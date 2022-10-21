@@ -529,6 +529,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 186775511837731208, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
+      propertyPath: SceneToGo
+      value: jorges scene
+      objectReference: {fileID: 0}
     - target: {fileID: 186775511837731214, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
       propertyPath: m_Name
       value: StartSegment
