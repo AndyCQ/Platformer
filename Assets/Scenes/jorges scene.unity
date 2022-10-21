@@ -13106,7 +13106,6 @@ GameObject:
   - component: {fileID: 1525552547}
   - component: {fileID: 1525552548}
   - component: {fileID: 1525552549}
-  - component: {fileID: 1525552550}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -13289,22 +13288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   jumpforce: 6
---- !u!111 &1525552550
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525552542}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9a851e2b305ba314bb8979bf49ffbaee, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 9a851e2b305ba314bb8979bf49ffbaee, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1571094334
 GameObject:
   m_ObjectHideFlags: 0
