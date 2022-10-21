@@ -6466,7 +6466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2111e549ed9677d48a56d7c70ce83aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToGo: 
+  SceneToGo: YouWin
 --- !u!212 &436891394
 SpriteRenderer:
   m_ObjectHideFlags: 0

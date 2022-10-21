@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class LevelSwitchCode : MonoBehaviour
 {
     public string SceneToGo;
-    public void SwitchScene(){
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneToGo);
+    public void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Player")){
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneToGo);
+        }
     }
 }
  
