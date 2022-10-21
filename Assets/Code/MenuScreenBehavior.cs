@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuScreenBehavior : MonoBehaviour
 {
+    public string SceneToGo;
     public void SwitchScene(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneToGo);
     }
 
     public void QuitGame(){

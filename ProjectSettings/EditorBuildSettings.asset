@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/NiravTestScene.unity
+    guid: e63309a49da98f747aa77c4f62f8660d
   m_configObjects: {}
