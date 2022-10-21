@@ -1,13 +1,15 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public Sound[] sounds;
     public static MusicManager instance;
-
+    public static string currScene = "";
+    public static AudioSource currBGM = null;
 
     void Awake()
     {
@@ -20,8 +22,11 @@ public class MusicManager : MonoBehaviour
         
         DontDestroyOnLoad(gameObject);
 
+        print(sounds.Length);
+        print(sounds[0].clip);
+
         foreach(Sound s in sounds){
-            gameObject.AddComponent<AudioSource>();
+            s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
@@ -30,12 +35,35 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    void Start(){
-        Play("Start Music");
+    void FixedUpdate(){
+        BGM();
     }
 
+    void BGM(){
+        string sceneName = SceneManager.GetActiveScene().name;
+        if(sceneName != currScene){
+            if(currBGM != null){
+                currBGM.Stop();
+            }
+            if(sceneName == "StartMenu"){
+                currBGM = PlayBGM("StartMenu");
+            }
+            if(sceneName == "jorges scene"){
+                currBGM = PlayBGM("Winds");
+            }
+            if(sceneName == "YouWin"){
+                currBGM = PlayBGM("EndScene");
+            }
+            currScene = sceneName;
+        }
+    }
     public void Play(string name){
         Sound s = Array.Find(sounds, sounds => sounds.name == name);
         s.source.Play();
+    }
+    public AudioSource PlayBGM(string name){
+        Sound s = Array.Find(sounds, sounds => sounds.name == name);
+        s.source.Play();
+        return s.source;
     }
 }
