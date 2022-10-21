@@ -61,7 +61,7 @@ public class PlayerCode : MonoBehaviour
         {
             transform.localScale *= new Vector2(-1,1);
         }
-
+        //print(Time.fixedDeltaTime);
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
         if(transform.position.y < deathLevel){
