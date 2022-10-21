@@ -62,7 +62,7 @@ public class PlayerCode : MonoBehaviour
             transform.localScale *= new Vector2(-1,1);
         }
 
-        _rigidbody.velocity = new Vector2(xSpeed * Time.fixedDeltaTime, _rigidbody.velocity.y);
+        _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
         if(transform.position.y < deathLevel){
             transform.position = playerSpawnPoint;
