@@ -95,6 +95,7 @@ public class PlayerCode : MonoBehaviour
                 _animator.SetTrigger("Shoot");
                 GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
                 newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
+                FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
             }
         }
 

@@ -28,6 +28,7 @@ public class MusicManager : MonoBehaviour
         foreach(Sound s in sounds){
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
+            s.source.outputAudioMixerGroup = s.group;
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
@@ -57,7 +58,7 @@ public class MusicManager : MonoBehaviour
             currScene = sceneName;
         }
     }
-    public void Play(string name){
+    public void PlaySoundEffects(string name){
         Sound s = Array.Find(sounds, sounds => sounds.name == name);
         s.source.Play();
     }
