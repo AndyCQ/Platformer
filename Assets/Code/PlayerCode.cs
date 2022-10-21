@@ -28,6 +28,15 @@ public class PlayerCode : MonoBehaviour
     public int currHealth;
     public int maxHealth = 5;
 
+    //dashing code
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+    [SerializeField] private TrailRenderer tr;
+
     float xSpeed = 0;
     void Start()
     {
@@ -41,6 +50,11 @@ public class PlayerCode : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        if (isDashing)
+        {
+            return;
+        }
         if(isDead) return;
         xSpeed = Input.GetAxisRaw("Horizontal") * speed;
         if((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0))
@@ -58,6 +72,10 @@ public class PlayerCode : MonoBehaviour
     }
 
     private void Update() {
+
+        if (isDashing){
+            return;
+        }
 
         if(isDead) return;
 
@@ -80,6 +98,11 @@ public class PlayerCode : MonoBehaviour
         }
         if(currHealth <= 0){
             Die();
+        }
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
         }
 
     }
@@ -133,4 +156,18 @@ public class PlayerCode : MonoBehaviour
         yield return 0;
     }
 
+    private IEnumerator Dash(){
+        canDash = false;
+        isDashing = true;
+        float originalGravity = _rigidbody.gravityScale;
+        _rigidbody.gravityScale = 0f;
+        _rigidbody.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        _rigidbody.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
 } 
