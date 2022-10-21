@@ -114,6 +114,7 @@ public class PlayerCode : MonoBehaviour
 
     public void Damage(int dmg){
         currHealth -= dmg;
+        gameObject.GetComponent<Animation>().Play("GetHit");
         
         
     }
