@@ -19,7 +19,6 @@ public class PlayerCode : MonoBehaviour
     Rigidbody2D _rigidbody;
     Animator _animator;
 
-    Vector2 playerSpawnPoint;
     bool isDead = false;
     SpriteRenderer _renderer;
 
@@ -38,11 +37,16 @@ public class PlayerCode : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
 
     float xSpeed = 0;
+    
+    private void Awake() {
+        transform.position = PublicVars.playerSpawnPoint;
+    }
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        playerSpawnPoint = transform.position;
+        PublicVars.playerSpawnPoint = transform.position;
         _renderer = GetComponent<SpriteRenderer>();
 
         currHealth = maxHealth;
@@ -64,9 +68,11 @@ public class PlayerCode : MonoBehaviour
         //print(Time.fixedDeltaTime);
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+
         if(transform.position.y < deathLevel){
-            transform.position = playerSpawnPoint;
+            transform.position = PublicVars.playerSpawnPoint;
             StartCoroutine(PlayerRespawn());
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
     }
@@ -110,14 +116,14 @@ public class PlayerCode : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Enemy"))
         {
-            transform.position = playerSpawnPoint;
+            transform.position = PublicVars.playerSpawnPoint;
             StartCoroutine(PlayerRespawn());
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Checkpoint")){
-            playerSpawnPoint = other.transform.position;
+            PublicVars.playerSpawnPoint = other.transform.position;
         }
     }
 
