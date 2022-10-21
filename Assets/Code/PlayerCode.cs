@@ -71,8 +71,7 @@ public class PlayerCode : MonoBehaviour
 
         if(transform.position.y < deathLevel){
             transform.position = PublicVars.playerSpawnPoint;
-            StartCoroutine(PlayerRespawn());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Die();
         }
 
     }
@@ -117,7 +116,7 @@ public class PlayerCode : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy"))
         {
             transform.position = PublicVars.playerSpawnPoint;
-            StartCoroutine(PlayerRespawn());
+            Die();
         }
     }
 
