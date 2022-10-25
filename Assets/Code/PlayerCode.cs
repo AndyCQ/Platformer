@@ -7,13 +7,14 @@ public class PlayerCode : MonoBehaviour
 {
     public int speed = 5;
     public int jumpForce = 500;
-    public int bulletForce = 500;
+    
 
     public LayerMask groundLayer;
     public Transform feetTrans;
     public bool grounded = false;
 
     public GameObject bulletPrefab;
+    public int bulletForce = 500;
     public Transform firePoint;
 
     Rigidbody2D _rigidbody;
@@ -117,13 +118,22 @@ public class PlayerCode : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy"))
         {
             transform.position = PublicVars.playerSpawnPoint;
-            Die();
+            Damage(1);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Checkpoint")){
-            PublicVars.playerSpawnPoint = other.transform.position;
+        switch(other.tag){
+            case "Checkpoint":
+                PublicVars.playerSpawnPoint = other.transform.position;
+                break;
+            
+            case "EnemyBullet":
+                Destroy(other.gameObject);
+                Damage(1);
+                break;
+
         }
     }
 
@@ -146,7 +156,6 @@ public class PlayerCode : MonoBehaviour
     public void Damage(int dmg){
         currHealth -= dmg;
         gameObject.GetComponent<Animation>().Play("GetHit");
-        
         
     }
 
