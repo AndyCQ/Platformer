@@ -49,7 +49,6 @@ public class PlayerCode : MonoBehaviour
         _animator = GetComponent<Animator>();
         PublicVars.playerSpawnPoint = transform.position;
         _renderer = GetComponent<SpriteRenderer>();
-
         currHealth = maxHealth;
     }
 
