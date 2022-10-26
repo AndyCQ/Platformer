@@ -113,14 +113,14 @@ public class PlayerCode : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Enemy"))
-        {
-            transform.position = PublicVars.playerSpawnPoint;
-            Damage(1);
-        }
+    // private void OnCollisionEnter2D(Collision2D other) {
+    //     if(other.gameObject.CompareTag("Enemy"))
+    //     {
+    //         transform.position = PublicVars.playerSpawnPoint;
+    //         Damage(1);
+    //     }
 
-    }
+    // }
 
     private void OnTriggerEnter2D(Collider2D other) {
         switch(other.tag){

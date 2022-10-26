@@ -2,20 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LizardCode : MonoBehaviour
+public class UFOCode : MonoBehaviour
 {
-    public float speed = 4;
-    public float lookDist = 4;
+    public float speed = 3;
+    public float lookDist = 5;
 
     public int currHealth;
-    public int maxHealth = 5;
+    public int maxHealth = 3;
 
-    public LayerMask GroundWallLayer;
     Rigidbody2D _rigidbody;
     Transform player;
-    public Transform castPoint;
-
-    private float startPosition;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -26,7 +22,6 @@ public class LizardCode : MonoBehaviour
         currHealth = maxHealth;
         _rigidbody = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
         StartCoroutine(MoveLoop());
     }
     
@@ -38,29 +33,21 @@ public class LizardCode : MonoBehaviour
                 if(player.position.x > transform.position.x && transform.localScale.x < 0 || 
                 player.position.x < transform.position.x && transform.localScale.x > 0)
                 {
+                    yield return new WaitForSeconds(.5f);
                     transform.localScale *= new Vector2(-1,1);
                 }
+                
+                _rigidbody.velocity = new Vector2(speed* transform.localScale.x, _rigidbody.velocity.y);
+
                 yield return new WaitForSeconds(.5f);
-                GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);   
+                GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation * Quaternion.Euler(0,0,90));
+                newBullet.GetComponent<Rigidbody2D>().AddForce(-transform.up * bulletForce);   
             }
+
             //Platform version
-            else if (Physics2D.Raycast(castPoint.position, transform.forward, 1, GroundWallLayer) ||
-            !Physics2D.Raycast(castPoint.position,-transform.up,1,GroundWallLayer))
-            {
-                transform.localScale *= new Vector2(-1,1);
+            else {
+                _rigidbody.velocity = Vector2.zero;
             }
-
-            _rigidbody.velocity = new Vector2(speed* transform.localScale.x, _rigidbody.velocity.y);
-
-            //Distance version
-            // else if(transform.position.x >= startPosition+distance || (transform.position.x < (startPosition))){
-            //     transform.localScale *= new Vector2(-1,1);
-            //     _rigidbody.velocity = new Vector2(speed* transform.localScale.x, _rigidbody.velocity.y);
-            // }
-            // else{
-            //     _rigidbody.velocity = new Vector2(speed* transform.localScale.x, _rigidbody.velocity.y);
-            // }
         }
     }
   
@@ -74,8 +61,6 @@ public class LizardCode : MonoBehaviour
             }
         }
     }
-
-
 
     void Die() {
         Destroy(gameObject,.15f);
