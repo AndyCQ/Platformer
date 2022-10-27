@@ -26,7 +26,7 @@ public class PlayerCode : MonoBehaviour
     public float deathLevel = -5;
 
     public int currHealth;
-    public int maxHealth = 5;
+    public int maxHealth = 6;
 
     //dashing code
     private bool canDash = true;
@@ -113,14 +113,14 @@ public class PlayerCode : MonoBehaviour
 
     }
 
-    // private void OnCollisionEnter2D(Collision2D other) {
-    //     if(other.gameObject.CompareTag("Enemy"))
-    //     {
-    //         transform.position = PublicVars.playerSpawnPoint;
-    //         Damage(1);
-    //     }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            
+            Damage(1);
+        }
 
-    // }
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         switch(other.tag){
@@ -160,6 +160,7 @@ public class PlayerCode : MonoBehaviour
 
     public IEnumerator Knockback (float knockDur, float knockbackPwr, Vector3 knockbackDir){
         float timer = 0;
+        print("here");
         _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
 
         while (knockDur > timer) {
