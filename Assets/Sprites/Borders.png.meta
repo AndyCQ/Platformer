@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec615c71a8393874291c27e5a4631811
+guid: d911a66e26da2964f9fa52fce7d0b064
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 22
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hearts_0
+      name: Borders_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 5
-        width: 12
-        height: 10
+        x: 12
+        y: 67
+        width: 124
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5c3745e5c327b442bc6744def42ee14
-      internalID: 1401076987
+      spriteID: 88090fb9a900c644da4d6e22c06c1dcd
+      internalID: -164396105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hearts_1
+      name: Borders_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 5
-        width: 12
-        height: 10
+        x: 65
+        y: 10
+        width: 45
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,29 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cda4b07f8d620a54b8b6ff72dfcc6e91
-      internalID: 201134686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hearts_2
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 5
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74751bb0aa9cbdb478f172b92339e421
-      internalID: 403296128
+      spriteID: 70fed35cb86e86d409048021d5f5ef58
+      internalID: 290523869
       vertices: []
       indices: 
       edges: []
@@ -202,9 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hearts_2: 403296128
-      hearts_1: 201134686
-      hearts_0: 1401076987
+      Borders_1: 290523869
+      Borders_0: -164396105
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
