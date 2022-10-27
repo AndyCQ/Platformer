@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec615c71a8393874291c27e5a4631811
+guid: fbebcfd8cfb13f7428df6f6919c42a6c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 22
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hearts_0
+      name: shields_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 5
-        width: 12
-        height: 10
+        x: 6
+        y: 6
+        width: 20
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5c3745e5c327b442bc6744def42ee14
-      internalID: 1401076987
+      spriteID: 8d9875379d2a24840820df041b85d621
+      internalID: 1418206968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hearts_1
+      name: shields_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 5
-        width: 12
-        height: 10
+        x: 31
+        y: 15
+        width: 29
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,29 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cda4b07f8d620a54b8b6ff72dfcc6e91
-      internalID: 201134686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hearts_2
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 5
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74751bb0aa9cbdb478f172b92339e421
-      internalID: 403296128
+      spriteID: b704520067ccb274184f8ee9b5ae5f72
+      internalID: -1830654977
       vertices: []
       indices: 
       edges: []
@@ -202,9 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hearts_2: 403296128
-      hearts_1: 201134686
-      hearts_0: 1401076987
+      shields_1: -1830654977
+      shields_0: 1418206968
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
