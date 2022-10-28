@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1836949082820781678}
   - component: {fileID: 2783145254423776900}
   - component: {fileID: -1139910651147761245}
+  - component: {fileID: -2786484570219198843}
   m_Layer: 0
   m_Name: Homing_Bullet
   m_TagString: Bullet_homing
@@ -147,3 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 1
+--- !u!114 &-2786484570219198843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107701319770021801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fb8c5c77021fd418bc04362ba68e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
