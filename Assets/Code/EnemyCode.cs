@@ -8,6 +8,9 @@ public class EnemyCode : MonoBehaviour
     public float distance = 4;
     public float lookDist = 4;
 
+    public int currHealth;
+    public int maxHealth = 4;
+
     public LayerMask GroundWallLayer;
     Rigidbody2D _rigidbody;
     Transform player;
@@ -67,8 +70,27 @@ public class EnemyCode : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")){
             Destroy(other.gameObject);
-            Destroy(gameObject,.15f);
+            currHealth -= PublicVars.bulletDMG;
         }
+        if (other.CompareTag("Bullet_smg")){
+            Destroy(other.gameObject);
+            currHealth -= PublicVars.bullet_smgDMG;
+        } 
+        if (other.CompareTag("Bullet_Big")){
+            Destroy(other.gameObject);
+            currHealth -= PublicVars.bullet_BIGDMG;
+        } 
+        if (other.CompareTag("Bullet_homing")){
+            Destroy(other.gameObject);
+            currHealth -= PublicVars.bullet_homingDMG;
+                                
+        }
+        if(currHealth <= 0){
+                Die();
+            }
     }
 
+    void Die() {
+        Destroy(gameObject,.15f);
+    }
 }
