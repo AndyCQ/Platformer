@@ -7,6 +7,7 @@ public class PlayerCode : MonoBehaviour
 {
     public int speed = 5;
     public int jumpForce = 500;
+    //public int jumpforce2 = 5;
 
     private bool isRunning;
     
@@ -94,7 +95,7 @@ public class PlayerCode : MonoBehaviour
             wallJumpingCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("joystick button 3")&& wallJumpingCounter > 0f)
         {
             isWallJumping = true;
             _rigidbody.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
@@ -180,12 +181,15 @@ public class PlayerCode : MonoBehaviour
 
         grounded = Physics2D.OverlapCircle(feetTrans.position, .3f, groundLayer);
         _animator.SetBool("Grounded", grounded);
-        if(Input.GetButtonDown("Jump") && grounded)
+        if((Input.GetButtonDown("Jump")) && grounded)
         {
             if(!Pause_Menu.Paused){
                 _rigidbody.AddForce(new Vector2(0, jumpForce));
             }
         }
+        // if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode)){{
+        //     _rigidbody.AddForce (Vector2.up*jumpforce2);
+        // }}
         if(Input.GetButtonDown("Fire1")){
             if(!Pause_Menu.Paused){
                 _animator.SetTrigger("Shoot");
@@ -200,7 +204,7 @@ public class PlayerCode : MonoBehaviour
             Die();
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey("joystick button 4"))&& canDash)
         {
             StartCoroutine(Dash());
         }
