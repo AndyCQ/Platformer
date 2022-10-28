@@ -67,7 +67,7 @@ public class HealthBar : MonoBehaviour
         UpdateHearts();
     }
     public void IncreaseHealth(){
-        healthNum--;
+        healthNum++;
         UpdateHearts();
     }
 }

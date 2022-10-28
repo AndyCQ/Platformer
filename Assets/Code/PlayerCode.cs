@@ -44,6 +44,7 @@ public class PlayerCode : MonoBehaviour
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
     public GameObject HealthBar;
+    public GameObject gunStorage;
 
     private bool isMoving;
     private bool isWallJumping;
@@ -188,9 +189,7 @@ public class PlayerCode : MonoBehaviour
         if(Input.GetButtonDown("Fire1")){
             if(!Pause_Menu.Paused){
                 _animator.SetTrigger("Shoot");
-                GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
-                FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
+                gunStorage.GetComponent<GunStorage>().Shooting(bulletForce,firePoint,transform.localScale.x/Mathf.Abs(transform.localScale.x));
             }
         }
 
