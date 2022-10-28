@@ -21,7 +21,7 @@ public class SwitchGravity : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.JoystickButton10)){
             rb.gravityScale *= -1;
-            player.jumpForce *= -7250;
+            player.jumpForce *= -1;
             Rotation();
         }
     }
