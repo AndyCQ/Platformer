@@ -26303,7 +26303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 500
+  jumpForce: 800
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -26322,8 +26322,11 @@ MonoBehaviour:
   - {fileID: 487738081}
   - {fileID: 2010960106}
   - {fileID: 1992171253}
+  - {fileID: 1489228325}
   - {fileID: 1765881269}
+  - {fileID: 388734097}
   - {fileID: 514238919}
+  - {fileID: 278700504}
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -26354,7 +26357,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525552542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c482487e4a6cb4da93f8253cb7e26f, type: 3}
   m_Name: 

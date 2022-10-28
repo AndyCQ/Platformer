@@ -181,7 +181,9 @@ public class PlayerCode : MonoBehaviour
         _animator.SetBool("Grounded", grounded);
         if(Input.GetButtonDown("Jump") && grounded)
         {
-            _rigidbody.AddForce(new Vector2(0, jumpForce));
+            if(!Pause_Menu.Paused){
+                _rigidbody.AddForce(new Vector2(0, jumpForce));
+            }
         }
         if(Input.GetButtonDown("Fire1")){
             if(!Pause_Menu.Paused){
