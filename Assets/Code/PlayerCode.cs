@@ -189,7 +189,6 @@ public class PlayerCode : MonoBehaviour
                 GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
                 newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
                 FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
-
             }
         }
 
@@ -283,8 +282,4 @@ public class PlayerCode : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
-
-    //public IEnumerator Shooting(){
-        
-    //}
 } 

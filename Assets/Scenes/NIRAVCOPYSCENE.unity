@@ -16786,7 +16786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.2, z: -10}
+  m_LocalPosition: {x: 0.099975586, y: 0.19999695, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18313,8 +18313,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -463.26
       objectReference: {fileID: 0}
+    - target: {fileID: 5041186603983257977, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1525552542}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+--- !u!1 &780292208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5041186603983257982, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+  m_PrefabInstance: {fileID: 740701651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &783179025
 GameObject:
   m_ObjectHideFlags: 0
@@ -25929,7 +25938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433134709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.2, z: -10}
+  m_LocalPosition: {x: 0.099975586, y: 0.19999695, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26264,7 +26273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525552542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0.099975586, y: 0.19999695, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26307,7 +26316,7 @@ MonoBehaviour:
   currHealth: 6
   maxHealth: 6
   tr: {fileID: 1525552552}
-  HealthBar: {fileID: 1906558569}
+  HealthBar: {fileID: 780292208}
   shootingIDLE: 0
   guns:
   - {fileID: 487738081}
@@ -26361,9 +26370,9 @@ Animation:
   m_GameObject: {fileID: 1525552542}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c11e68f2619c8764283f75b0684d7976, type: 2}
+  m_Animation: {fileID: 7400000, guid: a2be3f101c8854de2881cc26a9f59416, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: c11e68f2619c8764283f75b0684d7976, type: 2}
+  - {fileID: 7400000, guid: a2be3f101c8854de2881cc26a9f59416, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -38291,11 +38300,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d49ce791f1a159344891b872db3fdaaf, type: 3}
---- !u!1 &1906558569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5041186603559831963, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
-  m_PrefabInstance: {fileID: 740701651}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1907277912
 GameObject:
   m_ObjectHideFlags: 0
