@@ -43,6 +43,7 @@ public class GunStorage : MonoBehaviour
     }
     public bool secondFire(){
         if(secRounds == 0 && storeSecondary == 0){
+            FindObjectOfType<MusicManager>().PlaySoundEffects("empty_mag");
             return false;
         }
         if(secRounds > 0){
@@ -79,14 +80,16 @@ public class GunStorage : MonoBehaviour
                 if(secondFire()){
                     newBullet = Instantiate(bullets[1], firePoint.position, Quaternion.identity);
                     newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed*2f,0) * bulletForce);
-                    FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
+                    FindObjectOfType<MusicManager>().PlaySoundEffects("light_blast");
+                    FindObjectOfType<MusicManager>().PlaySoundEffects("light_blast");
+                    FindObjectOfType<MusicManager>().PlaySoundEffects("light_blast");
                 }
                 break;
             case 2:
                 if(secondFire()){
                     newBullet = Instantiate(bullets[2], firePoint.position, Quaternion.identity);
                     newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed/2f,0) * bulletForce);
-                    FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
+                    FindObjectOfType<MusicManager>().PlaySoundEffects("heavy_blast");
                 }
                 break;
             case 3:
@@ -97,7 +100,7 @@ public class GunStorage : MonoBehaviour
                     newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed,0) * bulletForce);
                     newBullet1.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed,1) * bulletForce);
                     newBullet2.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed,-1) * bulletForce);
-                    FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
+                    FindObjectOfType<MusicManager>().PlaySoundEffects("multiblast");
                 }
                 break;
             default:

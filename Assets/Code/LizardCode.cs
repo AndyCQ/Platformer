@@ -34,6 +34,7 @@ public class LizardCode : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(.1f);
+            FindObjectOfType<MusicManager>().PlaySoundEffects("heavyFootstep");
             if (Vector2.Distance(transform.position, player.position) < lookDist){
                 if(player.position.x > transform.position.x && transform.localScale.x < 0 || 
                 player.position.x < transform.position.x && transform.localScale.x > 0)
