@@ -7,6 +7,8 @@ public class PlayerCode : MonoBehaviour
 {
     public int speed = 5;
     public int jumpForce = 500;
+
+    private bool isRunning;
     
 
     public LayerMask groundLayer;
