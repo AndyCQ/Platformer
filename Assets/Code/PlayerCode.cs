@@ -38,6 +38,8 @@ public class PlayerCode : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
 
     float xSpeed = 0;
+
+    public GameObject HealthBar;
     
     private void Awake() {
         transform.position = PublicVars.playerSpawnPoint;
@@ -155,6 +157,7 @@ public class PlayerCode : MonoBehaviour
     public void Damage(int dmg){
         currHealth -= dmg;
         gameObject.GetComponent<Animation>().Play("GetHit");
+        HealthBar.GetComponent<HealthBar>().DecreaseHealth();
         
     }
 
