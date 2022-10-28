@@ -57,5 +57,9 @@ public class Elevator : MonoBehaviour
         else{
             elevator.color = Color.red;
         }
+        //if(iselevatordown)
+        //{
+            //transform.position = Vector2
+        //}
     }
 }
