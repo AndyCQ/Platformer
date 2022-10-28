@@ -191,6 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15279961314684c4a84c9228acb75194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseFirstButton: {fileID: 0}
+  optionsFirstButton: {fileID: 0}
+  optionsClosedButton: {fileID: 0}
   SceneToGo: 
 --- !u!114 &7734715622438032066
 MonoBehaviour:
@@ -639,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9004168740084239274, guid: 5b1ba2e2e12e5f44fba360566ccae1ee, type: 3}
       propertyPath: m_text
-      value: 'Music: 100'
+      value: 'Music:'
       objectReference: {fileID: 0}
     - target: {fileID: 9004168740084239274, guid: 5b1ba2e2e12e5f44fba360566ccae1ee, type: 3}
       propertyPath: m_fontAsset
@@ -859,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9004168740084239274, guid: 5b1ba2e2e12e5f44fba360566ccae1ee, type: 3}
       propertyPath: m_text
-      value: 'Sound: 100'
+      value: 'Sound:'
       objectReference: {fileID: 0}
     - target: {fileID: 9004168740084239274, guid: 5b1ba2e2e12e5f44fba360566ccae1ee, type: 3}
       propertyPath: m_fontAsset

@@ -95,7 +95,7 @@ public class PlayerCode : MonoBehaviour
             wallJumpingCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("joystick button 3")&& wallJumpingCounter > 0f)
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("KeyCode.JoystickButton3")&& wallJumpingCounter > 0f)
         {
             isWallJumping = true;
             _rigidbody.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
@@ -148,7 +148,7 @@ public class PlayerCode : MonoBehaviour
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
 
         if(Mathf.Abs(xSpeed) > 0.1f){
-            FindObjectOfType<MusicManager>().PlaySoundEffects("footstep");    
+                
             isMoving = true;
         } else{
             isMoving = false;
@@ -206,7 +206,7 @@ public class PlayerCode : MonoBehaviour
             Die();
         }
 
-        if((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey("joystick button 6"))&& canDash)
+        if((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey("joystick button 4"))&& canDash)
         {
             StartCoroutine(Dash());
         }
