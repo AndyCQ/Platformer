@@ -18,7 +18,7 @@ public class SpikeKnockback : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player")){
-            player.Damage(3);
+            player.Damage(1);
 
             StartCoroutine(player.Knockback(0.02f, knockbackPowerInEditor, player.transform.position));
         }
