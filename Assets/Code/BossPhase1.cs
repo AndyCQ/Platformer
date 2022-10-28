@@ -24,6 +24,8 @@ public class BossPhase1 : MonoBehaviour
     public Transform Canon2;
     public Transform mainCanon;
 
+    public GameObject End;
+
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         NextAttack();
@@ -168,6 +170,7 @@ public class BossPhase1 : MonoBehaviour
     }
 
     void Die() {
+        End.SetActive(true);
         Destroy(gameObject,.15f);
     }
 
