@@ -58,7 +58,7 @@ public class PlayerCode : MonoBehaviour
 
     public GameObject[] guns;
 
-    //[SerializeField] private Transform wallCheck;
+    [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
     private bool IsGrounded()
@@ -66,7 +66,7 @@ public class PlayerCode : MonoBehaviour
         return Physics2D.OverlapCircle(feetTrans.position, .3f, groundLayer);
     }
     private bool IsWalled(){
-        //return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
         return false;
     }
 
