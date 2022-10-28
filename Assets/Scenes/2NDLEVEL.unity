@@ -850,7 +850,7 @@ MonoBehaviour:
   downpos: {fileID: 1354111989}
   upperpos: {fileID: 718112527}
   elevator: {fileID: 405760897}
-  speed: 1.5
+  speed: 1.8
 --- !u!50 &405760899
 Rigidbody2D:
   serializedVersion: 4
