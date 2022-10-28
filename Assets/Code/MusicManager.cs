@@ -61,6 +61,9 @@ public class MusicManager : MonoBehaviour
             if(sceneName == "4THLEVEL"){
                 currBGM = PlayBGM("Final");
             }
+            if(sceneName == "5THLEVEL"){
+                currBGM = PlayBGM("Final");
+            }
             if(sceneName == "YouWin"){
                 currBGM = PlayBGM("EndScene");
             }
