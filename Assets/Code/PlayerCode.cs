@@ -44,7 +44,8 @@ public class PlayerCode : MonoBehaviour
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
     public GameObject HealthBar;
-    
+
+    private bool isMoving;
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
@@ -52,7 +53,11 @@ public class PlayerCode : MonoBehaviour
     private float wallJumpingDuration = 0.4f;
     private Vector2 wallJumpingPower = new Vector2(8f,16f);
 
-    [SerializeField] private Transform wallCheck;
+    public bool shootingIDLE = false;
+
+    public GameObject[] guns;
+
+    //[SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
     private bool IsGrounded()
@@ -60,7 +65,8 @@ public class PlayerCode : MonoBehaviour
         return Physics2D.OverlapCircle(feetTrans.position, .3f, groundLayer);
     }
     private bool IsWalled(){
-        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        //return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        return false;
     }
 
     private void WallSlide(){
@@ -138,6 +144,12 @@ public class PlayerCode : MonoBehaviour
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
 
+        if(Mathf.Abs(xSpeed) > 0.1f){
+            isMoving = true;
+        } else{
+            isMoving = false;
+        }
+
         if(transform.position.y < deathLevel){
             transform.position = PublicVars.playerSpawnPoint;
             Die();
@@ -153,6 +165,18 @@ public class PlayerCode : MonoBehaviour
 
         if(isDead) return;
 
+        if(isMoving){
+            guns[2*PublicVars.activeGun+1].SetActive(true);
+        } else{
+            guns[2*PublicVars.activeGun+1].SetActive(false);
+        }
+
+        if(shootingIDLE){
+            guns[2*PublicVars.activeGun].SetActive(true);
+        }else {
+            guns[2*PublicVars.activeGun].SetActive(false);
+        }
+
         grounded = Physics2D.OverlapCircle(feetTrans.position, .3f, groundLayer);
         _animator.SetBool("Grounded", grounded);
         if(Input.GetButtonDown("Jump") && grounded)
@@ -165,6 +189,7 @@ public class PlayerCode : MonoBehaviour
                 GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
                 newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
                 FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
+
             }
         }
 
@@ -258,4 +283,8 @@ public class PlayerCode : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+    //public IEnumerator Shooting(){
+        
+    //}
 } 
