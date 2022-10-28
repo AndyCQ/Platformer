@@ -25,9 +25,9 @@ public class Elevator : MonoBehaviour
 
     void StartElevator()
     {
-        if(Vector2.Distance(player.position, elevatorswitch.posiiton)<0.5f && Input.GetKeyDown("e"))
+        if(Vector2.Distance(player.position, elevatorswitch.position)<0.5f && Input.GetKeyDown("e"))
         {
-            if(transform.posiiton.y <= downpos.position.y)
+            if(transform.position.y <= downpos.position.y)
             {
                 iselevatordown = true;
             }
@@ -37,9 +37,9 @@ public class Elevator : MonoBehaviour
             }
         }
 
-        if(iselevatordown)
-        {
-            transform.position = Vector2
-        }
+        //if(iselevatordown)
+        //{
+            //transform.position = Vector2
+        //}
     }
 }
