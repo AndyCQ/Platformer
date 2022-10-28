@@ -34,7 +34,6 @@ public class LizardCode : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(.1f);
-            FindObjectOfType<MusicManager>().PlaySoundEffects("heavyFootstep");
             if (Vector2.Distance(transform.position, player.position) < lookDist){
                 if(player.position.x > transform.position.x && transform.localScale.x < 0 || 
                 player.position.x < transform.position.x && transform.localScale.x > 0)
@@ -43,7 +42,8 @@ public class LizardCode : MonoBehaviour
                 }
                 yield return new WaitForSeconds(.5f);
                 GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);   
+                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
+                
             }
             //Platform version
             else if (Physics2D.Raycast(castPoint.position, transform.forward, 1, GroundWallLayer) ||
