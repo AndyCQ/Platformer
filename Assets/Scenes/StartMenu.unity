@@ -918,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
       propertyPath: sounds.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
       propertyPath: sounds.Array.data[11].clip
@@ -929,6 +929,14 @@ PrefabInstance:
       value: electronicWave
       objectReference: {fileID: 0}
     - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2796991c2d63adf4c9c3d417a318aeaf, type: 3}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: gun_switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
       propertyPath: sounds.Array.data[11].group
       value: 
       objectReference: {fileID: 24300002, guid: c625c7c41c7597147bf95210f1642c8c, type: 2}
@@ -936,6 +944,10 @@ PrefabInstance:
       propertyPath: sounds.Array.data[11].pitch
       value: 0.95
       objectReference: {fileID: 0}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[12].group
+      value: 
+      objectReference: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
     - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
       propertyPath: sounds.Array.data[11].volume
       value: 1

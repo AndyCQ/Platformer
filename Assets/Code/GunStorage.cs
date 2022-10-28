@@ -81,8 +81,6 @@ public class GunStorage : MonoBehaviour
                     newBullet = Instantiate(bullets[1], firePoint.position, Quaternion.identity);
                     newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed*2f,0) * bulletForce);
                     FindObjectOfType<MusicManager>().PlaySoundEffects("light_blast");
-                    FindObjectOfType<MusicManager>().PlaySoundEffects("light_blast");
-                    FindObjectOfType<MusicManager>().PlaySoundEffects("light_blast");
                 }
                 break;
             case 2:
@@ -236,6 +234,7 @@ public class GunStorage : MonoBehaviour
                     PublicVars.activeGun = focusSecond;
                     storedGun = focusSecond;
                 }
+                FindObjectOfType<MusicManager>().PlaySoundEffects("gun_switch");
             }
             if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.JoystickButton4)){
                 if(focusSecond>2){
@@ -247,6 +246,7 @@ public class GunStorage : MonoBehaviour
                     PublicVars.activeGun = focusSecond;
                     storedGun = focusSecond;
                 }
+                FindObjectOfType<MusicManager>().PlaySoundEffects("gun_switch");
             }
         }
         if(Input.GetKeyUp(KeyCode.Tab) || Input.GetKeyUp(KeyCode.JoystickButton0)){
@@ -279,6 +279,7 @@ public class GunStorage : MonoBehaviour
                 }
             }
             updateUI();
+            FindObjectOfType<MusicManager>().PlaySoundEffects("gun_switch");
         }
 
     }
