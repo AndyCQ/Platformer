@@ -8,6 +8,7 @@ public class Elevator : MonoBehaviour
     public Transform elevatorswitch;
     public Transform downpos;
     public Transform upperpos;
+    public SpriteRenderer elevator;
 
     public float speed;
     bool iselevatordown;
@@ -21,13 +22,14 @@ public class Elevator : MonoBehaviour
     void Update()
     {
         StartElevator();
+        DisplayColor();
     }
 
     void StartElevator()
     {
-        if(Vector2.Distance(player.position, elevatorswitch.posiiton)<0.5f && Input.GetKeyDown("e"))
+        if(Vector2.Distance(player.position, elevatorswitch.position)<0.5f && Input.GetKeyDown("e"))
         {
-            if(transform.posiiton.y <= downpos.position.y)
+            if(transform.position.y <= downpos.position.y)
             {
                 iselevatordown = true;
             }
@@ -39,7 +41,21 @@ public class Elevator : MonoBehaviour
 
         if(iselevatordown)
         {
-            transform.position = Vector2
+            transform.position = Vector2.MoveTowards(transform.position, upperpos.position,speed*Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position,downpos.position,speed *Time.deltaTime);
+        }
+    }
+
+    void DisplayColor(){
+        if(transform.position.y <= downpos.position.y || transform.position.y >= upperpos.position.y)
+        {
+            elevator.color = Color.green;
+        }
+        else{
+            elevator.color = Color.red;
         }
     }
 }
