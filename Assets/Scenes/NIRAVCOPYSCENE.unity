@@ -19172,6 +19172,11 @@ Transform:
   m_Father: {fileID: 1331790026}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1094195292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5041186603983257982, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+  m_PrefabInstance: {fileID: 1769357224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1137200520
 GameObject:
   m_ObjectHideFlags: 0
@@ -25712,7 +25717,7 @@ MonoBehaviour:
   currHealth: 6
   maxHealth: 6
   tr: {fileID: 1525552552}
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 1094195292}
 --- !u!95 &1525552548
 Animator:
   serializedVersion: 4

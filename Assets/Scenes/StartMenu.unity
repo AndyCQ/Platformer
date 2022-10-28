@@ -485,6 +485,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Project S
       objectReference: {fileID: 0}
+    - target: {fileID: 186775511447914198, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fb44c6ea0703244ca8105192b5351eb, type: 2}
+    - target: {fileID: 186775511447914198, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -126367631950843767, guid: 8fb44c6ea0703244ca8105192b5351eb, type: 2}
     - target: {fileID: 186775511447914199, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
