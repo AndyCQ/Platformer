@@ -229,6 +229,8 @@ public class PlayerCode : MonoBehaviour
         switch(other.tag){
             case "Checkpoint":
                 PublicVars.playerSpawnPoint = other.transform.position;
+                Animator others = other.GetComponent<Animator>();
+                others.SetTrigger("Triggered");
                 break;
             
             case "EnemyBullet":
