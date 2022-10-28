@@ -200,11 +200,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323903575}
   m_CullTransparentMesh: 1
---- !u!1 &470027687 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7734715621081080762, guid: 8513bdb8539299545a3b873190276906, type: 3}
-  m_PrefabInstance: {fileID: 7734715621617998312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &323903579
 Animator:
   serializedVersion: 4
@@ -225,6 +220,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &470027687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7734715621081080762, guid: 8513bdb8539299545a3b873190276906, type: 3}
+  m_PrefabInstance: {fileID: 7734715621617998312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &652608420
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 186775511447914198, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
       propertyPath: m_text
-      value: Project S
+      value: Space Invading
       objectReference: {fileID: 0}
     - target: {fileID: 186775511447914198, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
       propertyPath: m_fontAsset
@@ -673,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 186775511837731208, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
       propertyPath: SceneToGo
-      value: jorges scene
+      value: 1STLEVEL
       objectReference: {fileID: 0}
     - target: {fileID: 186775511837731208, guid: 80a3b1e2e88b37f49bc2c1cdce2e71f2, type: 3}
       propertyPath: pauseFirstButton
@@ -915,6 +915,30 @@ PrefabInstance:
     - target: {fileID: 2136205114039271057, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f6510b707d01cfc44984033154792187, type: 3}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: electronicWave
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[11].group
+      value: 
+      objectReference: {fileID: 24300002, guid: c625c7c41c7597147bf95210f1642c8c, type: 2}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[11].pitch
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413802333614537983, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943435745049374423, guid: 5c07f4c01a3e62d44a5d3341a8e1108c, type: 3}
       propertyPath: m_Name

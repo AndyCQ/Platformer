@@ -115,10 +115,24 @@ MonoBehaviour:
     loop: 0
     group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
     source: {fileID: 0}
-  - name: heavyFootstep
-    clip: {fileID: 8300000, guid: 0945b72b3fde78e41b2d01139ecee2a5, type: 3}
+  - name: Electronic
+    clip: {fileID: 8300000, guid: f6510b707d01cfc44984033154792187, type: 3}
     volume: 1
     pitch: 0.95
     loop: 0
-    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    group: {fileID: 24300002, guid: c625c7c41c7597147bf95210f1642c8c, type: 2}
+    source: {fileID: 0}
+  - name: Different
+    clip: {fileID: 8300000, guid: 1a68fa94e804fcb49b5908def6b622a1, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: c625c7c41c7597147bf95210f1642c8c, type: 2}
+    source: {fileID: 0}
+  - name: Final
+    clip: {fileID: 8300000, guid: 85f475cf6450b9b48bb7207f791fc8ee, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: c625c7c41c7597147bf95210f1642c8c, type: 2}
     source: {fileID: 0}
