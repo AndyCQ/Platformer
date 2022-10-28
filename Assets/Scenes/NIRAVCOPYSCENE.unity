@@ -19172,6 +19172,11 @@ Transform:
   m_Father: {fileID: 1331790026}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1094195292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5041186603983257982, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+  m_PrefabInstance: {fileID: 1769357224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1137200520
 GameObject:
   m_ObjectHideFlags: 0
@@ -25498,7 +25503,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c652ce6733d84c9eb0f74463f1e5c00, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25518,9 +25523,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5660378, g: 0.5521538, b: 0.5521538, a: 1}
+  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25709,9 +25714,10 @@ MonoBehaviour:
   bulletForce: 500
   firePoint: {fileID: 1765500540}
   deathLevel: -15
-  currHealth: 5
-  maxHealth: 5
+  currHealth: 6
+  maxHealth: 6
   tr: {fileID: 1525552552}
+  HealthBar: {fileID: 1094195292}
 --- !u!95 &1525552548
 Animator:
   serializedVersion: 4
@@ -37324,7 +37330,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c652ce6733d84c9eb0f74463f1e5c00, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37344,7 +37350,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

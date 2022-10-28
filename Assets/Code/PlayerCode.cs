@@ -41,6 +41,7 @@ public class PlayerCode : MonoBehaviour
 
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
+    public GameObject HealthBar;
     
     private bool isWallJumping;
     private float wallJumpingDirection;
@@ -224,6 +225,7 @@ public class PlayerCode : MonoBehaviour
     public void Damage(int dmg){
         currHealth -= dmg;
         gameObject.GetComponent<Animation>().Play("GetHit");
+        HealthBar.GetComponent<HealthBar>().DecreaseHealth();
         
     }
 
