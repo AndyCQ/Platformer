@@ -53,13 +53,13 @@ public class MusicManager : MonoBehaviour
                 currBGM = PlayBGM("Winds");
             }
             if(sceneName == "2NDLEVEL"){
-                currBGM = PlayBGM("Winds");
+                currBGM = PlayBGM("Electronic");
             }
             if(sceneName == "3RDLEVEL"){
-                currBGM = PlayBGM("Winds");
+                currBGM = PlayBGM("Different");
             }
             if(sceneName == "4THLEVEL"){
-                currBGM = PlayBGM("Winds");
+                currBGM = PlayBGM("Final");
             }
             if(sceneName == "YouWin"){
                 currBGM = PlayBGM("EndScene");
