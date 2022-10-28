@@ -5,8 +5,7 @@ using UnityEngine;
 public class OverworldLerp : MonoBehaviour
 {
     public GameObject[] platforms;
-    int currentIndex = 0;
-    float moveSpeed = .1f;
+    public int currentIndex = 0;
 
     void Update()
     {
@@ -16,14 +15,16 @@ public class OverworldLerp : MonoBehaviour
     }
     void Moveup(){
         if(currentIndex < 4 && PublicVars.l_status[currentIndex]){
-            GameObject destination = platforms[currentIndex++];
+            GameObject destination = platforms[currentIndex+1];
+            currentIndex++;
             gameObject.transform.position = destination.transform.position;
         }
     }
 
     void MoveDown(){
         if(currentIndex > 0){
-            GameObject destination = platforms[currentIndex--];
+            GameObject destination = platforms[currentIndex-1];
+            currentIndex--;
             gameObject.transform.position = destination.transform.position;
         }
     }

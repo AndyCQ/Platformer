@@ -6,7 +6,7 @@ using UnityEngine;
 public static class PublicVars 
 {
     
-    public static Vector2 playerSpawnPoint;// = GameObject.FindGameObjectWithTag("Player").transform.position;
+    public static Vector2 playerSpawnPoint = GameObject.FindGameObjectWithTag("Player").transform.position;
     public static int activeGun;
     public static int[] unlockedGuns = {1,1,1};
     public static int bulletDMG = 2;
@@ -14,5 +14,5 @@ public static class PublicVars
     public static int bullet_BIGDMG = 8;
     public static int bullet_homingDMG = 3;
 
-    public static bool[] l_status = {true,false,false,false};
+    public static bool[] l_status = {true,true,true,false};
 }

@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/IDK I BROKE IT.unity
-    guid: e63309a49da98f747aa77c4f62f8660d
   - enabled: 1
     path: Assets/Scenes/1STLEVEL.unity
     guid: 977dc8745dccb824eb9546a154af4649
