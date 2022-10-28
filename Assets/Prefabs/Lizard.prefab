@@ -234,7 +234,7 @@ MonoBehaviour:
   speed: 2
   lookDist: 8
   currHealth: 0
-  maxHealth: 5
+  maxHealth: 8
   GroundWallLayer:
     serializedVersion: 2
     m_Bits: 8

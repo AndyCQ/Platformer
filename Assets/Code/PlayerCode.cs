@@ -45,13 +45,19 @@ public class PlayerCode : MonoBehaviour
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
     public GameObject HealthBar;
-    
+    public GameObject gunStorage;
+
+    private bool isMoving;
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.4f;
     private Vector2 wallJumpingPower = new Vector2(8f,16f);
+
+    public bool shootingIDLE = false;
+
+    public GameObject[] guns;
 
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
@@ -62,6 +68,7 @@ public class PlayerCode : MonoBehaviour
     }
     private bool IsWalled(){
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        return false;
     }
 
     private void WallSlide(){
@@ -139,6 +146,12 @@ public class PlayerCode : MonoBehaviour
         _rigidbody.velocity = new Vector2(xSpeed, _rigidbody.velocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
 
+        if(Mathf.Abs(xSpeed) > 0.1f){
+            isMoving = true;
+        } else{
+            isMoving = false;
+        }
+
         if(transform.position.y < deathLevel){
             transform.position = PublicVars.playerSpawnPoint;
             Die();
@@ -154,11 +167,25 @@ public class PlayerCode : MonoBehaviour
 
         if(isDead) return;
 
+        if(isMoving){
+            guns[2*PublicVars.activeGun+1].SetActive(true);
+        } else{
+            guns[2*PublicVars.activeGun+1].SetActive(false);
+        }
+
+        if(shootingIDLE){
+            guns[2*PublicVars.activeGun].SetActive(true);
+        }else {
+            guns[2*PublicVars.activeGun].SetActive(false);
+        }
+
         grounded = Physics2D.OverlapCircle(feetTrans.position, .3f, groundLayer);
         _animator.SetBool("Grounded", grounded);
         if((Input.GetButtonDown("Jump")) && grounded)
         {
-            _rigidbody.AddForce(new Vector2(0, jumpForce));
+            if(!Pause_Menu.Paused){
+                _rigidbody.AddForce(new Vector2(0, jumpForce));
+            }
         }
         // if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode)){{
         //     _rigidbody.AddForce (Vector2.up*jumpforce2);
@@ -166,9 +193,7 @@ public class PlayerCode : MonoBehaviour
         if(Input.GetButtonDown("Fire1")){
             if(!Pause_Menu.Paused){
                 _animator.SetTrigger("Shoot");
-                GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce);
-                FindObjectOfType<MusicManager>().PlaySoundEffects("blast");
+                gunStorage.GetComponent<GunStorage>().Shooting(bulletForce,firePoint,transform.localScale.x/Mathf.Abs(transform.localScale.x));
             }
         }
 
@@ -231,7 +256,7 @@ public class PlayerCode : MonoBehaviour
     public void Damage(int dmg){
         currHealth -= dmg;
         gameObject.GetComponent<Animation>().Play("GetHit");
-        HealthBar.GetComponent<HealthBar>().DecreaseHealth();
+        HealthBar.GetComponent<HealthBar>().DecreaseHealth(dmg);
         
     }
 

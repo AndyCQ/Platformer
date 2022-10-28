@@ -9,6 +9,11 @@ TagManager:
   - Checkpoint
   - Ladder
   - EnemyBullet
+  - Bullet_Big
+  - Bullet_homing
+  - Bullet_smg
+  - Teleporter
+  - Wall
   layers:
   - Default
   - TransparentFX

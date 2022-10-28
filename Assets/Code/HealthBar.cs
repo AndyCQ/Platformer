@@ -62,12 +62,12 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    public void DecreaseHealth(){
-        healthNum--;
+    public void DecreaseHealth(int num = 1){
+        healthNum -= num;
         UpdateHearts();
     }
-    public void IncreaseHealth(){
-        healthNum--;
+    public void IncreaseHealth(int num = 1){
+        healthNum += 1;
         UpdateHearts();
     }
 }

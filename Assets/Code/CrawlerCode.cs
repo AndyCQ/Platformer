@@ -68,11 +68,24 @@ public class CrawlerCode : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")){
             Destroy(other.gameObject);
-            currHealth -= 1;
-            if(currHealth <= 0){
+            currHealth -= PublicVars.bulletDMG;
+        }
+        if (other.CompareTag("Bullet_smg")){
+            Destroy(other.gameObject);
+            currHealth -= PublicVars.bullet_smgDMG;
+        } 
+        if (other.CompareTag("Bullet_Big")){
+            Destroy(other.gameObject);
+            currHealth -= PublicVars.bullet_BIGDMG;
+        } 
+        if (other.CompareTag("Bullet_homing")){
+            Destroy(other.gameObject);
+            currHealth -= PublicVars.bullet_homingDMG;
+                                
+        }
+        if(currHealth <= 0){
                 Die();
             }
-        }
     }
 
     // private void OnCollisionEnter2D(Collision2D other)
