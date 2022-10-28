@@ -49,7 +49,16 @@ public class MusicManager : MonoBehaviour
             if(sceneName == "StartMenu"){
                 currBGM = PlayBGM("StartMenu");
             }
-            if(sceneName == "jorges scene"){
+            if(sceneName == "1STLEVEL"){
+                currBGM = PlayBGM("Winds");
+            }
+            if(sceneName == "2NDLEVEL"){
+                currBGM = PlayBGM("Winds");
+            }
+            if(sceneName == "3RDLEVEL"){
+                currBGM = PlayBGM("Winds");
+            }
+            if(sceneName == "4THLEVEL"){
                 currBGM = PlayBGM("Winds");
             }
             if(sceneName == "YouWin"){

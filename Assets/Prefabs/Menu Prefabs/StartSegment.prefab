@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title In Progress
+  m_text: Space Invading
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8fb44c6ea0703244ca8105192b5351eb, type: 2}
   m_sharedMaterial: {fileID: -126367631950843767, guid: 8fb44c6ea0703244ca8105192b5351eb, type: 2}
@@ -346,6 +346,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15279961314684c4a84c9228acb75194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseFirstButton: {fileID: 0}
+  optionsFirstButton: {fileID: 0}
+  optionsClosedButton: {fileID: 0}
   SceneToGo: NiravTestScene
 --- !u!114 &186775511837731253
 MonoBehaviour:
