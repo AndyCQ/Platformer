@@ -12,6 +12,7 @@ TagManager:
   - Bullet_Big
   - Bullet_homing
   - Bullet_smg
+  - Teleporter
   layers:
   - Default
   - TransparentFX
