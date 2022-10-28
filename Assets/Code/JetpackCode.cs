@@ -20,7 +20,7 @@ public class JetpackCode : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKey(KeyCode.Space)){{
+        if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton3)){{
             rb.AddForce (Vector2.up*jumpforce);
         }}
     }

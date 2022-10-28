@@ -9,7 +9,7 @@ public class Pause_Menu : MonoBehaviour
 
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 9")){
             if(Paused){
                 Resume();
             } else{
