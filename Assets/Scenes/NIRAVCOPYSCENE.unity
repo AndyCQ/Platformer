@@ -18167,6 +18167,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1495538973414623031, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+      propertyPath: bullets.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495538973414623031, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
       propertyPath: uiGuns.Array.data[0]
       value: 
       objectReference: {fileID: 1065671753}
@@ -18178,6 +18182,22 @@ PrefabInstance:
       propertyPath: uiGuns.Array.data[2]
       value: 
       objectReference: {fileID: 484500411}
+    - target: {fileID: 1495538973414623031, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+      propertyPath: bullets.Array.data[0]
+      value: 
+      objectReference: {fileID: 2107701319770021801, guid: 8ce4328ac5b9d704cabe8bd117464aa9, type: 3}
+    - target: {fileID: 1495538973414623031, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+      propertyPath: bullets.Array.data[1]
+      value: 
+      objectReference: {fileID: 2107701319770021801, guid: c440775eab57b5741b4da2a7fc81172c, type: 3}
+    - target: {fileID: 1495538973414623031, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+      propertyPath: bullets.Array.data[2]
+      value: 
+      objectReference: {fileID: 2107701319770021801, guid: b0409ec185425474ea5f3c224a32196f, type: 3}
+    - target: {fileID: 1495538973414623031, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
+      propertyPath: bullets.Array.data[3]
+      value: 
+      objectReference: {fileID: 2107701319770021801, guid: 950d30e12a3cab840b13f5c2c542eeca, type: 3}
     - target: {fileID: 3304928309737956639, guid: 5c1216d1dca544a4598b838dd843acca, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
