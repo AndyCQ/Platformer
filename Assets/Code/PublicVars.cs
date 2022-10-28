@@ -13,4 +13,6 @@ public static class PublicVars
     public static int bullet_smgDMG = 1;
     public static int bullet_BIGDMG = 8;
     public static int bullet_homingDMG = 3;
+
+    public static bool[] l_status = {false,false,false,false};
 }
