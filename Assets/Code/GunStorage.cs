@@ -220,10 +220,10 @@ public class GunStorage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Tab)){
+        if(Input.GetKey(KeyCode.Tab) || Input.GetKey(KeyCode.JoystickButton0) ){
             Time.timeScale = 0f;
             Pause_Menu.Paused = true;
-            if(Input.GetKeyDown(KeyCode.W)){
+            if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.JoystickButton5)){
                 if(focusSecond<2){
                     focusSecond = 4;
                 }
@@ -234,7 +234,7 @@ public class GunStorage : MonoBehaviour
                     storedGun = focusSecond;
                 }
             }
-            if(Input.GetKeyDown(KeyCode.S)){
+            if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.JoystickButton4)){
                 if(focusSecond>2){
                     focusSecond = 0;
                 }
@@ -246,11 +246,11 @@ public class GunStorage : MonoBehaviour
                 }
             }
         }
-        if(Input.GetKeyUp(KeyCode.Tab)){
+        if(Input.GetKeyUp(KeyCode.Tab) || Input.GetKeyUp(KeyCode.JoystickButton0)){
             Time.timeScale = 1f;
             Pause_Menu.Paused = false;
         }
-        if(Input.GetKeyDown(KeyCode.Q)){
+        if(Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton11)){
             if(PublicVars.activeGun == 0){
                 if(storedGun == 0){
                     print("Not Yet Unlocked");
