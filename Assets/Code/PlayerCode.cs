@@ -206,7 +206,7 @@ public class PlayerCode : MonoBehaviour
             Die();
         }
 
-        if((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey("joystick button 4"))&& canDash)
+        if((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey("joystick button 6"))&& canDash)
         {
             StartCoroutine(Dash());
         }
