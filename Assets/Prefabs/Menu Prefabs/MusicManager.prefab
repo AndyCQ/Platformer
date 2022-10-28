@@ -73,3 +73,52 @@ MonoBehaviour:
     loop: 0
     group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
     source: {fileID: 0}
+  - name: heavy_blast
+    clip: {fileID: 8300000, guid: 18d6a007b013c9d4ebf7f7c44e1e5f06, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    source: {fileID: 0}
+  - name: empty_mag
+    clip: {fileID: 8300000, guid: d3bfc09906578ae4f97f0be75ae2cce8, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    source: {fileID: 0}
+  - name: multiblast
+    clip: {fileID: 8300000, guid: 9f45e6a5f5cd816458d7c9359c903f4b, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    source: {fileID: 0}
+  - name: light_blast
+    clip: {fileID: 8300000, guid: 8154f5e18ea48164e9cb0132012cf432, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    source: {fileID: 0}
+  - name: footstep
+    clip: {fileID: 8300000, guid: dd3a9bf23f1906c41820c9956b72b01f, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    source: {fileID: 0}
+  - name: heavyFootstep
+    clip: {fileID: 8300000, guid: 0945b72b3fde78e41b2d01139ecee2a5, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    source: {fileID: 0}
+  - name: heavyFootstep
+    clip: {fileID: 8300000, guid: 0945b72b3fde78e41b2d01139ecee2a5, type: 3}
+    volume: 1
+    pitch: 0.95
+    loop: 0
+    group: {fileID: 24300002, guid: 43b0a80544a680b42b9383d8f8a59a85, type: 2}
+    source: {fileID: 0}

@@ -667,6 +667,7 @@ GameObject:
   - component: {fileID: 7440752637598256921}
   - component: {fileID: 7440752637598256920}
   - component: {fileID: 7440752637598256919}
+  - component: {fileID: 4522451855705643518}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -790,7 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 800
+  jumpForce: 600
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -990,6 +991,27 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!50 &4522451855705643518
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7440752637598256929}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &7440752637633726618
 GameObject:
   m_ObjectHideFlags: 0

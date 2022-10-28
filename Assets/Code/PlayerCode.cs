@@ -138,6 +138,7 @@ public class PlayerCode : MonoBehaviour
         }
         if(isDead) return;
         xSpeed = Input.GetAxisRaw("Horizontal") * speed;
+
         if((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0))
         {
             transform.localScale *= new Vector2(-1,1);
@@ -147,6 +148,7 @@ public class PlayerCode : MonoBehaviour
         _animator.SetFloat("Speed", Mathf.Abs(xSpeed));
 
         if(Mathf.Abs(xSpeed) > 0.1f){
+            FindObjectOfType<MusicManager>().PlaySoundEffects("footstep");    
             isMoving = true;
         } else{
             isMoving = false;
@@ -160,7 +162,6 @@ public class PlayerCode : MonoBehaviour
     }
 
     private void Update() {
-
         if (isDashing){
             return;
         }
@@ -169,6 +170,7 @@ public class PlayerCode : MonoBehaviour
 
         if(isMoving){
             guns[2*PublicVars.activeGun+1].SetActive(true);
+            
         } else{
             guns[2*PublicVars.activeGun+1].SetActive(false);
         }
