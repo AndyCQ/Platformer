@@ -505,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3874765675025542667, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3874765675025542670, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -1084,6 +1088,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
       value: UFO (4)
@@ -1315,6 +1327,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
       value: UFO (1)
@@ -1510,6 +1530,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
       value: UFO (6)
@@ -1575,6 +1603,14 @@ PrefabInstance:
     - target: {fileID: 3956871150347810410, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
@@ -1745,6 +1781,14 @@ PrefabInstance:
     - target: {fileID: 3874765675025542667, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
       propertyPath: m_Name
       value: Ground (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874765675025542667, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874765675025542667, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 3874765675025542670, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
       propertyPath: m_RootOrder
@@ -2090,6 +2134,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
       value: UFO (3)
@@ -2155,6 +2207,14 @@ PrefabInstance:
     - target: {fileID: 3956871150347810410, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
@@ -2329,6 +2389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3874765675025542667, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3874765675025542670, guid: f3eced7a312a4cc4aa311bd61a1663b3, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2498,7 +2562,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2866,6 +2930,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
       value: UFO (7)
@@ -2973,6 +3045,14 @@ PrefabInstance:
     - target: {fileID: 3956871150347810410, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
@@ -3284,6 +3364,14 @@ PrefabInstance:
     - target: {fileID: 3956871150347810410, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956871150347810421, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
+      propertyPath: bulletForce
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3956871150347810422, guid: 5d3572cb1a136204ba8e9437ebe7437b, type: 3}
       propertyPath: m_Name
