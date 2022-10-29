@@ -19,7 +19,7 @@ public class SwitchGravity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.JoystickButton10)){
+        if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.JoystickButton10)){
             rb.gravityScale *= -1;
             player.jumpForce *= -1;
             Rotation();

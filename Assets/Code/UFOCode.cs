@@ -78,6 +78,7 @@ public class UFOCode : MonoBehaviour
     }
 
     void Die() {
+        PublicVars.killed++;
         Destroy(gameObject,.15f);
     }
 

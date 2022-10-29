@@ -14,5 +14,7 @@ public static class PublicVars
     public static int bullet_BIGDMG = 8;
     public static int bullet_homingDMG = 3;
 
+    public static int killed = 0;
+    public static bool done = false;
     public static bool[] l_status = {true,true,true,false};
 }

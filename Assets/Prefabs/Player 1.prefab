@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2653359711778028862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3739449899816276906}
+  m_Layer: 0
+  m_Name: WallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3739449899816276906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2653359711778028862}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.35000038, y: 0.07000306, z: -0.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7440752637598256925}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7440752635977032697
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +728,7 @@ Transform:
   - {fileID: 7440752636705228333}
   - {fileID: 7440752636595336055}
   - {fileID: 7440752636697705318}
+  - {fileID: 3739449899816276906}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -791,7 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 600
+  jumpForce: 1200
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -816,10 +848,10 @@ MonoBehaviour:
   - {fileID: 7440752636697705319}
   - {fileID: 7440752637265855562}
   - {fileID: 7440752637633726618}
-  wallCheck: {fileID: 0}
+  wallCheck: {fileID: 3739449899816276906}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!95 &7440752637598256923
 Animator:
   serializedVersion: 4
@@ -847,7 +879,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7440752637598256929}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c482487e4a6cb4da93f8253cb7e26f, type: 3}
   m_Name: 
@@ -882,7 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e6d8b5048478b4fa689d62db4455be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 4522451855705643518}
 --- !u!96 &7440752637598256919
 TrailRenderer:
   serializedVersion: 2
@@ -1003,7 +1035,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

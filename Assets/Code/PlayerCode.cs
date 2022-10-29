@@ -10,8 +10,6 @@ public class PlayerCode : MonoBehaviour
     //public int jumpforce2 = 5;
 
     private bool isRunning;
-    
-
     public LayerMask groundLayer;
     public Transform feetTrans;
     public bool grounded = false;
@@ -95,7 +93,7 @@ public class PlayerCode : MonoBehaviour
             wallJumpingCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("KeyCode.JoystickButton3")&& wallJumpingCounter > 0f)
+        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
         {
             isWallJumping = true;
             _rigidbody.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
@@ -222,6 +220,11 @@ public class PlayerCode : MonoBehaviour
             
             Damage(1);
         }
+        if(other.gameObject.CompareTag("BOSS"))
+        {
+            
+            Damage(6);
+        }
 
     }
 
@@ -255,6 +258,9 @@ public class PlayerCode : MonoBehaviour
 
     void Die() {
         Application.LoadLevel(Application.loadedLevel);
+        // transform.position = PublicVars.playerSpawnPoint;
+
+        // PlayerRespawn();
     }
 
     public void Damage(int dmg){

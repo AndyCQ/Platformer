@@ -14,6 +14,7 @@ TagManager:
   - Bullet_smg
   - Teleporter
   - Wall
+  - BOSS
   layers:
   - Default
   - TransparentFX

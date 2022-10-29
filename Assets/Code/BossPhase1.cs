@@ -161,9 +161,9 @@ public class BossPhase1 : MonoBehaviour
         } 
         if (other.CompareTag("Bullet_homing")){
             Destroy(other.gameObject);
-            currHealth -= PublicVars.bullet_homingDMG;
-                                
+            currHealth -= PublicVars.bullet_homingDMG;                       
         }
+        
         if(currHealth <= 0){
                 Die();
             }
@@ -171,6 +171,7 @@ public class BossPhase1 : MonoBehaviour
 
     void Die() {
         End.SetActive(true);
+        PublicVars.killed += 24;
         Destroy(gameObject,.15f);
     }
 
