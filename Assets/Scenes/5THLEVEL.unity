@@ -646,6 +646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7440752637598256920, guid: 4c87d35accf0b2744983bfde88e659fd, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 643759116}
     - target: {fileID: 7440752637598256924, guid: 4c87d35accf0b2744983bfde88e659fd, type: 3}
       propertyPath: HealthBar
       value: 
@@ -746,7 +750,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2.2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
