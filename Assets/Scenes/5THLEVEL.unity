@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2869114427007226849, guid: 787c9d3b081468d4888e0a720af95ab2, type: 3}
+      propertyPath: SceneToGo
+      value: End
+      objectReference: {fileID: 0}
     - target: {fileID: 2869114427007226850, guid: 787c9d3b081468d4888e0a720af95ab2, type: 3}
       propertyPath: m_SortingOrder
       value: 20
@@ -649,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 7440752637598256920, guid: 4c87d35accf0b2744983bfde88e659fd, type: 3}
       propertyPath: rb
       value: 
+      objectReference: {fileID: 643759125}
+    - target: {fileID: 7440752637598256920, guid: 4c87d35accf0b2744983bfde88e659fd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7440752637598256924, guid: 4c87d35accf0b2744983bfde88e659fd, type: 3}
       propertyPath: HealthBar
@@ -2039,6 +2047,10 @@ PrefabInstance:
       propertyPath: End
       value: 
       objectReference: {fileID: 1697888857}
+    - target: {fileID: 5484459098020757294, guid: 6e496d20f63a87d43917d3b2efce92a8, type: 3}
+      propertyPath: maxHealth
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e496d20f63a87d43917d3b2efce92a8, type: 3}
 --- !u!1 &2144670214 stripped

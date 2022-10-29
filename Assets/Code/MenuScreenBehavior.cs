@@ -27,6 +27,7 @@ public class MenuScreenBehavior : MonoBehaviour
     }
 
     public void QuitGame(){
+        print("quit");
         Application.Quit();
     }
 }
