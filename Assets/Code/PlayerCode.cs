@@ -114,9 +114,6 @@ public class PlayerCode : MonoBehaviour
     {
         isWallJumping = false;
     }
-    private void Awake() {
-        transform.position = PublicVars.playerSpawnPoint;
-    }
 
     void Start()
     {
