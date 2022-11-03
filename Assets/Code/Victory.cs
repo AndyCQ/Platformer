@@ -11,6 +11,7 @@ public class Victory : MonoBehaviour{
     public static int killed;
 
     void Start(){
+        killed = PublicVars.killed;
         if(killed < 30){
             defeat.SetActive(true);
         } else{

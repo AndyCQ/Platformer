@@ -172,6 +172,7 @@ public class BossPhase1 : MonoBehaviour
     void Die() {
         End.SetActive(true);
         PublicVars.killed += 24;
+        Victory.killed = PublicVars.killed;
         Destroy(gameObject,.15f);
     }
 
