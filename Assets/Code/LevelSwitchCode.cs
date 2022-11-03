@@ -8,6 +8,7 @@ public class LevelSwitchCode : MonoBehaviour
     public string SceneToGo;
     public void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
+            PublicVars.firstLoad = true;
             SceneManager.LoadScene(SceneToGo);
         }
     }

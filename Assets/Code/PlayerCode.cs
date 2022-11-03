@@ -80,6 +80,12 @@ public class PlayerCode : MonoBehaviour
         }
     }
 
+    private void Awake() {
+        if(!PublicVars.firstLoad){
+            transform.position = PublicVars.playerSpawnPoint;
+        }
+    }
+
     private void WallJump()
     {
         if (isWallSliding)
@@ -122,6 +128,7 @@ public class PlayerCode : MonoBehaviour
         PublicVars.playerSpawnPoint = transform.position;
         _renderer = GetComponent<SpriteRenderer>();
         currHealth = maxHealth;
+        PublicVars.firstLoad = false;
     }
 
     void FixedUpdate()
@@ -155,6 +162,7 @@ public class PlayerCode : MonoBehaviour
         }
 
     }
+
 
     private void Update() {
         if (isDashing){
@@ -254,8 +262,9 @@ public class PlayerCode : MonoBehaviour
     }
 
     void Die() {
+        
         Application.LoadLevel(Application.loadedLevel);
-        // transform.position = PublicVars.playerSpawnPoint;
+        transform.position = PublicVars.playerSpawnPoint;
 
         // PlayerRespawn();
     }
